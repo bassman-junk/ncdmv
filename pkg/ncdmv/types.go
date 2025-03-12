@@ -35,6 +35,8 @@ const (
 	AppointmentTypeMotorcycleSkillsTest   AppointmentType = 8
 	AppointmentTypeNonCDLRoadTest         AppointmentType = 13
 	AppointmentTypePermit                 AppointmentType = 9
+	AppointmentTypeTeenDriverLevelTwo     AppointmentType = 11
+	AppointmentTypeTeenDriverLevelThree   AppointmentType = 12
 )
 
 func (a AppointmentType) String() string {
@@ -57,6 +59,10 @@ func (a AppointmentType) String() string {
 		return "non-cdl-road-test"
 	case AppointmentTypePermit:
 		return "permit"
+	case AppointmentTypeTeenDriverLevelTwo:
+		return "teen-driver-level-two"
+	case AppointmentTypeTeenDriverLevelThree:
+		return "teen-driver-level-three"
 	}
 	panic("unreachable: invalid AppointmentType")
 }
@@ -70,6 +76,8 @@ var appointmentTypeMap map[string]AppointmentType = map[string]AppointmentType{
 	AppointmentTypeMotorcycleSkillsTest.String():   AppointmentTypeMotorcycleSkillsTest,
 	AppointmentTypeNonCDLRoadTest.String():         AppointmentTypeNonCDLRoadTest,
 	AppointmentTypePermit.String():                 AppointmentTypePermit,
+	AppointmentTypeTeenDriverLevelTwo.String():	AppointmentTypeTeenDriverLevelTwo,	
+	AppointmentTypeTeenDriverLevelThree.String():	AppointmentTypeTeenDriverLevelThree,
 }
 
 func StringToAppointmentType(k string) AppointmentType {
